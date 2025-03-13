@@ -1,5 +1,7 @@
 name: Workflow Demo 2
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+env:
+  aws-username: "Vigneswari"
 on: 
   workflow_dispatch:
     inputs:
@@ -29,3 +31,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: echo "The entered username is ${{inputs.name}}."
       - run: echo "The entered build number is ${{inputs.buildnumber}}."
+      - run: echo "The AWS username is $aws-username"
