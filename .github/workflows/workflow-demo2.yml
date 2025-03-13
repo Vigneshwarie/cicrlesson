@@ -31,6 +31,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
           pwd
+          echo $STEP_ENV
+        env: 
+          STEP_ENV: "Boopathy"
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: echo "The entered username is ${{ inputs.name }}."
       - run: echo "The entered build number is ${{ inputs.buildnumber }}."
