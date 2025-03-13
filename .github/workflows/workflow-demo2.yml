@@ -30,6 +30,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+          pwd
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: echo "The entered username is ${{ inputs.name }}."
       - run: echo "The entered build number is ${{ inputs.buildnumber }}."
