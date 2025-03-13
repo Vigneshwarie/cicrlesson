@@ -16,6 +16,8 @@ on:
         type: string
 jobs:
   Explore-GitHub-Actions:
+    env:
+      mysql-username: "mysql-username"
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -32,3 +34,4 @@ jobs:
       - run: echo "The entered username is ${{inputs.name}}."
       - run: echo "The entered build number is ${{inputs.buildnumber}}."
       - run: echo "The AWS username is ${{env.aws-username}}"
+      - run: echo "The MySQL username is $mysql-username"
