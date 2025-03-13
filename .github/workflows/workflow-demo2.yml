@@ -12,9 +12,6 @@ on:
         description: 'Enter the build number'
         required: false
         type: string
-  push:
-    branches:
-      - main
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
