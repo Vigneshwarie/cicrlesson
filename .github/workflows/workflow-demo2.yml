@@ -19,6 +19,7 @@ jobs:
     runs-on: macos-15
     steps: 
       - run: echo "Hello World ${{vars.REPO_VAR_USERNAME}}" 
+      - run: echo "My Secret is ${{secrets.MY_SECRET_NAME}}"
   Explore-GitHub-Actions:
     env:
       mysql-username: "Anooooo"
@@ -43,4 +44,5 @@ jobs:
       - run: echo "The entered build number is ${{ inputs.buildnumber }}."
       - run: echo "The AWS username is ${{ env.aws-username }}"
       - run: echo "The MySQL username is ${{ env.mysql-username }}"
+      
 
